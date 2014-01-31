@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>24/7 Local Plumbers</title>
+<link href='http://fonts.googleapis.com/css?family=Nunito:300,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="../SkyPrototypes/css/foundation.css">
+
+
+<style>
+
+</style>
+</head>
+<body>
+
+<div class="topMenu">
+	<div class="row">
+        <div class="large-5 columns">
+        	<h5>Providing you with 24/7 plumbers when you need them most!</h5>
+        </div>
+        <div class="large-7 columns">
+        	<ul>
+            	<li><a href="#">home</a></li>
+                <li><a href="#">view local map</a></li>
+                <li><a href="#">contact us</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="row">
+	<div class="large-6 columns">
+    	
+	</div>
+    
+    <div class="large-6 columns">
+        <div class="postcode">
+        	<h2>NEED A PLUMBER FAST?</h2>
+            <p>We have plumbers operating 24/7 in your area today!</p> 
+            <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+			<script type="text/javascript">
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(function(position){
+                    var latitude = position.coords.latitude;
+                    var longitude = position.coords.longitude;
+                    var coords = new google.maps.LatLng(latitude, longitude);
+                    var mapOptions = {
+                        zoom: 15,
+                        center: coords,
+                        mapTypeControl: true,
+                        navigationControlOptions: {
+                            style: google.maps.NavigationControlStyle.SMALL
+                        },
+                        mapTypeId: google.maps.MapTypeId.ROADMAP
+                        };
+                        map = new google.maps.Map(
+                            document.getElementById("mapContainer"), mapOptions
+                            );
+                        var marker = new google.maps.Marker({
+                                position: coords,
+                                map: map,
+                                title: "Your current location!"
+                        });
+             
+                    });
+                }else {
+                    alert("Geolocation API is not supported in your browser.");
+                }
+            </script>
+            <style type="text/css">
+            #mapContainer {
+                height: 150px;
+                max-width: 100%;
+                border:10px solid #eaeaea;
+            }
+            </style>
+            <div id="mapContainer"></div>
+            <input type="text" class="postCodeInput" placeholder="Enter your postcode">
+            <p>Enter your Post Code and we will find you a 24/7 plumber with the best rates that is available in your area right now!</p>
+            <p><a href="#" class="medium button success radius">Find my plumber</a></p>
+        </div>
+	</div>
+</div>
+<!-- Start Html5Video section -->
+<div class="easyhtml5video"><video autoplay="autoplay" title="24/7 Local Plumbers" loop="loop" onended="var v=this;setTimeout(function(){v.play()},300)">
+<source src="html5video/020436151-waterdrop-loop.m4v" type="video/mp4" />
+<source src="html5video/020436151-waterdrop-loop.webm" type="video/webm" />
+<object type="application/x-shockwave-flash" data="html5video/flashfox.swf" width="1920" height="1080" style="position:relative;">
+<param name="movie" value="html5video/flashfox.swf" />
+<param name="allowFullScreen" value="true" />
+<param name="flashVars" value="autoplay=true&amp;controls=false&amp;fullScreenEnabled=false&amp;posterOnEnd=true&amp;loop=true&amp;poster=html5video/020436151-waterdrop-loop.jpg&amp;src=020436151-waterdrop-loop.m4v" />
+ <embed src="html5video/flashfox.swf" width="1920" height="1080" style="position:relative;"  flashVars="autoplay=true&amp;controls=false&amp;fullScreenEnabled=false&amp;posterOnEnd=true&amp;loop=true&amp;poster=html5video/020436151-waterdrop-loop.jpg&amp;src=020436151-waterdrop-loop.m4v"	allowFullScreen="true" wmode="transparent" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflashplayer_en" />
+<img alt="020436151-waterdrop-loop" src="html5video/020436151-waterdrop-loop.jpg" style="position:absolute;left:0;" width="100%" title="Video playback is not supported by your browser" />
+</object>
+</video></div>
+<!-- End Html5Video section -->
+<script src="JavaScript/jquery.js"></script>
+
+</body>
+</html>
